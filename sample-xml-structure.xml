@@ -180,6 +180,7 @@
 			<SiteLink>/Results/QLD?t=UQ%20Smash%203</SiteLink>
 			<SiteLinkTitle>View data for [QLD] UQ Smash 3</SiteLinkTitle>
 		</XmlTourneyModel>
+	</Tourneys>
 	<Characters>
 		<XmlCharacterModel>
 			<ID>66</ID>

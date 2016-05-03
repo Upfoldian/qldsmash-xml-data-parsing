@@ -1,17 +1,16 @@
 require 'JSON'
 require 'nokogiri'
-require 'date'
 
 xml = Nokogiri::XML(File.read "sample-xml-structure.xml")
 xml = xml.xpath("//EloXmlModel")
 
-createDate 	= DateTime.parse(xml.xpath("CreatedDate").text).to_s
-gameName 	= xml.xpath("GameName").text.strip
-gameShort 	= xml.xpath("GameShort").text.strip
+createDate 	= xml.xpath("CreatedDate").text
+gameName 	= xml.xpath("GameName").text
+gameShort 	= xml.xpath("GameShort").text
 
 #puts "#{createDate}, #{gameName}, #{gameShort}" 
 
-eloHash = {:createDate => createDate, :gameName => gameName, :gameShort => gameShort, :items => []}
+eloHash = {:createDate => createDate, :gameName => gameName, :gameShort => gameShort, :items => [], :players => [], :tourneys => [], :characters => [], :regions => []}
 
 xml.xpath("Items//EloItemXmlModel").each do |item|
 	
@@ -74,7 +73,7 @@ xml.xpath("Items//EloItemXmlModel").each do |item|
 		
 		overallCharUse 	= charUsage.xpath("OverallCharacterUsage").text.to_i
 		relativeCharUse = charUsage.xpath("RelativeCharacterUsage").text.to_i
-		characterID	= charUsage.xpath("CharacterID").text.to_i
+		characterID		= charUsage.xpath("CharacterID").text.to_i
 
 		characterHash = {:overallCharUse => overallCharUse, :relativeCharUse => relativeCharUse, :characterID => characterID}
 		characterUsage.push characterHash
@@ -90,4 +89,61 @@ xml.xpath("Items//EloItemXmlModel").each do |item|
 	eloHash[:items].push itemHash
 
 end
-puts eloHash.to_s
+
+xml.xpath("Players//XmlPlayerModel").each do |player|
+
+	playerID 			= player.xpath("ID").text.to_i
+	name 				= player.xpath("Name").text
+	siteLink 			= player.xpath("SiteLink").text
+	siteLinkTitle 		= player.xpath("SiteLinkTitle").text
+	regionID 			= player.xpath("RegionID").text
+
+	playerHash = {:playerID => playerID, :name => name, :siteLink => siteLink, :siteLinkTitle => siteLinkTitle, :regionID => regionID}
+	#puts playerHash.to_s
+	eloHash[:players].push playerHash
+
+end
+
+xml.xpath("Tourneys//XmlTourneyModel").each do |tourney|
+
+	tourneyID 			= tourney.xpath("ID").text.to_i
+	name 				= tourney.xpath("Name").text
+	displayName 		= tourney.xpath("DisplayName").text
+	regionID 			= tourney.xpath("RegionID").text.to_i
+	tourneyDate 		= tourney.xpath("TourneyDate").text
+	siteLink 			= tourney.xpath("SiteLink").text
+	siteLinkTitle 		= tourney.xpath("SiteLinkTitle").text
+
+	tourneyHash =	{:tourneyID => tourneyID, :name => name, :displayName => displayName, :regionID => regionID, :tourneyDate => tourneyDate,
+					 :siteLink => siteLink, :siteLinkTitle => siteLinkTitle}
+	#puts tourneyHash.to_s
+	eloHash[:tourneys].push tourneyHash
+end
+
+xml.xpath("Characters//XmlCharacterModel").each do |character|
+
+	characterID 		= character.xpath("ID").text.to_i
+	name 				= character.xpath("Name").text
+	short 				= character.xpath("Short").text
+	imgURL 				= character.xpath("ImageUrl").text
+	colour 				= character.xpath("Colour").text
+
+	characterHash = {:characterID => characterID, :name => name, :short => short, :imgURL => imgURL, :colour => colour}
+	#puts characterHash.to_s
+	eloHash[:characters].push characterHash
+end
+
+xml.xpath("Regions//XmlRegionModel").each do |region|
+
+	regionID 			= region.xpath("ID").text
+	imgURL 				= region.xpath("ImageUrl").text
+	name 				= region.xpath("Name").text
+	short 				= region.xpath("Short").text
+
+	regionHash = {:regionID => regionID, :imgURL => imgURL, :name => name, :short => short}
+	#puts regionHash.to_s
+	eloHash[:regions].push regionHash
+
+end
+
+File.open("test_xml_parse.json", 'w') { |file| file.write(JSON.pretty_generate(eloHash))}

@@ -1,0 +1,110 @@
+{
+  "createDate": "2016-04-27T22:18:56.3901188Z",
+  "gameName": "Super Smash Bros. Melee",
+  "gameShort": "SSBM",
+  "items": [
+    {
+      "rank": 1,
+      "localRank": 1,
+      "score": 2777,
+      "rankMovement": 0,
+      "localRankMovement": 0,
+      "scoreMovement": 107,
+      "movements": [
+        {
+          "oldScore": 2739,
+          "newScore": "2777",
+          "oppOldScore": "2539",
+          "oppNewScore": "2501",
+          "oppID": "1048",
+          "oppName": "Syke",
+          "oppIsTagged": "true",
+          "tourneyID": "814",
+          "eventName": "Singles Pro",
+          "playerCharImg": "",
+          "isWin": "true",
+          "change": "38",
+          "winnerName": "smopup",
+          "note": ""
+        },
+        {
+          "oldScore": 2695,
+          "newScore": "2739",
+          "oppOldScore": "2550",
+          "oppNewScore": "2506",
+          "oppID": "1048",
+          "oppName": "Syke",
+          "oppIsTagged": "true",
+          "tourneyID": "814",
+          "eventName": "Singles Pro",
+          "playerCharImg": "",
+          "isWin": "true",
+          "change": "44",
+          "winnerName": "smopup",
+          "note": ""
+        }
+      ],
+      "playerID": 1049,
+      "characters": [
+        73,
+        70,
+        87
+      ],
+      "hasCharacterData": "true",
+      "characterUsage": [
+        {
+          "overallCharUse": 82,
+          "relativeCharUse": 100,
+          "characterID": 73
+        },
+        {
+          "overallCharUse": 14,
+          "relativeCharUse": 17,
+          "characterID": 70
+        },
+        {
+          "overallCharUse": 4,
+          "relativeCharUse": 4,
+          "characterID": 87
+        }
+      ]
+    }
+  ],
+  "players": [
+    {
+      "playerID": 1038,
+      "name": "Shitashi",
+      "siteLink": "/Players/QLD?p=Shitashi",
+      "siteLinkTitle": "View Smash Bros data for Shitashi from Queensland",
+      "regionID": "4"
+    }
+  ],
+  "tourneys": [
+    {
+      "tourneyID": 334,
+      "name": "UQ Smash 3",
+      "displayName": "[QLD] UQ Smash 3",
+      "regionID": 4,
+      "tourneyDate": "2014-12-13T00:00:00",
+      "siteLink": "/Results/QLD?t=UQ%20Smash%203",
+      "siteLinkTitle": "View data for [QLD] UQ Smash 3"
+    }
+  ],
+  "characters": [
+    {
+      "characterID": 66,
+      "name": "Bowser",
+      "short": "Bowser",
+      "imgURL": "/Content/Uploads/227461c4-cff6-4b9b-bf76-621ceff3c4d2.png",
+      "colour": "#32765c"
+    }
+  ],
+  "regions": [
+    {
+      "regionID": "4",
+      "imgURL": "/Content/Uploads/2e82492e-24c9-4863-94f2-0aebe084ff64.png",
+      "name": "Queensland",
+      "short": "QLD"
+    }
+  ]
+}
