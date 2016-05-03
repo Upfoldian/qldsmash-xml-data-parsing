@@ -1,7 +1,7 @@
 require 'JSON'
 require 'nokogiri'
 
-xml = Nokogiri::XML(File.read "sample-xml-structure.xml")
+xml = Nokogiri::XML(File.read "20160502 - qldsmash SSBM elo.xml")
 xml = xml.xpath("//EloXmlModel")
 
 createDate 	= xml.xpath("CreatedDate").text
@@ -146,4 +146,4 @@ xml.xpath("Regions//XmlRegionModel").each do |region|
 
 end
 
-File.open("test_xml_parse.json", 'w') { |file| file.write(JSON.pretty_generate(eloHash))}
+File.open("20160502 - qldsmash SSBM elo.json", 'w') { |file| file.write(JSON.pretty_generate(eloHash))}
