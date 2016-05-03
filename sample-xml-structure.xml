@@ -117,6 +117,23 @@
 					<WinnerName>smopup</WinnerName>
 					<Note />
 				</EloMovementXmlModel>
+				<EloMovementXmlModel>
+					<OldScore>2695</OldScore>
+					<NewScore>2739</NewScore>
+					<OpponentOldScore>2550</OpponentOldScore>
+					<OpponentNewScore>2506</OpponentNewScore>
+					<OpponentID>1048</OpponentID>
+					<OpponentName>Syke</OpponentName>
+					<OpponentIsTagged>true</OpponentIsTagged>
+					<TourneyID>814</TourneyID>
+					<EventName>Singles Pro</EventName>
+					<PlayerCharImages />
+					<OpponentCharImages />
+					<IsWin>true</IsWin>
+					<Change>44</Change>
+					<WinnerName>smopup</WinnerName>
+					<Note />
+				</EloMovementXmlModel>
 			</Movements>
 			<PlayerID>1049</PlayerID>
 			<Characters>
