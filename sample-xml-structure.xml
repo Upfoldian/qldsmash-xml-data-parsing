@@ -1,4 +1,6 @@
-<!--EloItemXmlModel doc
+<!--
+
+==== Items EloItemXmlModel ====
 
 <Items>
 	<EloItemXmlModel>
@@ -9,7 +11,7 @@
 		<LocalRankMovement> => value | rank movement within respective region
 		<ScoreMovement> 	=> value | elo change since last update
 		<Movements> 		=> array | contains a complete match history/elo change
-			- <EloMovementXmlModels> see related doc
+			- <EloMovementXmlModel> see related doc
 
 		<PlayerID> 			=> value | id used to tie in to a player profile (later in xml file)
 		<Characters> 		=> array | character ids for listed (most used?) characters
@@ -18,7 +20,72 @@
 		<CharacterUsage> 	=> array | containslist of all listed character usage at tournaments
 			- <EloItemCharacterUsageItem> see related doc
 	</EloItemXmlModel
-</Items> -->
+</Items> 
+
+==== Movements EloMovementXmlModle ====
+
+ 	<OldScore> 				=>
+ 	<NewScore> 				=>
+ 	<OpponentOldScore> 		=>
+ 	<OpponentNewScore> 		=>
+ 	<OpponentID> 			=>
+ 	<OpponnentName> 		=>
+ 	<OpponentIsTagged> 		=>
+ 	<TourneyID> 			=>
+ 	<EventName> 			=>
+ 	<IsWin> 				=>
+ 	<Change> 				=>
+ 	<WinnerName> 			=>
+ 	<Note> 					=>
+
+==== Character Usage EloItemCharacterUsageItem ====
+
+	<OverallCharacterUsage> =>
+	<RelativeCharacterUsage>=>
+	<CharacterID> 			=>
+
+==== Player XmlPlayerModel  ====
+
+	<ID> 					=>
+	<Name> 					=>
+	<SiteLink> 				=>
+	<SiteLinkTitle> 		=>
+	<RegionID> 				=>
+
+==== Tourneys XmlTourneyModel ====
+
+	<ID> 					=>
+	<Name> 					=>
+	<DisplayName> 			=>
+	<RegionID> 				=>
+	<TourneyDate> 			=>
+	<SiteLink> 				=>
+	<SiteLinkTitle> 		=>
+
+==== Characters XmlCharacterModel ====
+
+	<ID> 					=>
+	<Name> 					=>
+	<Short> 				=>
+	<ImageUrl> 				=>
+	<Colour>  				=>
+
+==== Region XmlRegionModel ====
+
+	<ID> 					=>
+	<ImageUrl> 				=>
+	<Name> 					=>
+	<Short> 				=>
+
+-->
+
+
+
+
+
+
+
+
 
 <?xml version="1.0" encoding="utf-8"?>
 <EloXmlModel xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
