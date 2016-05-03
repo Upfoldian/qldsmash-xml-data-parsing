@@ -13,33 +13,33 @@
       "movements": [
         {
           "oldScore": 2739,
-          "newScore": "2777",
-          "oppOldScore": "2539",
-          "oppNewScore": "2501",
-          "oppID": "1048",
+          "newScore": 2777,
+          "oppOldScore": 2539,
+          "oppNewScore": 2501,
+          "oppID": 1048,
           "oppName": "Syke",
           "oppIsTagged": "true",
-          "tourneyID": "814",
+          "tourneyID": 814,
           "eventName": "Singles Pro",
           "playerCharImg": "",
           "isWin": "true",
-          "change": "38",
+          "change": 38,
           "winnerName": "smopup",
           "note": ""
         },
         {
           "oldScore": 2695,
-          "newScore": "2739",
-          "oppOldScore": "2550",
-          "oppNewScore": "2506",
-          "oppID": "1048",
+          "newScore": 2739,
+          "oppOldScore": 2550,
+          "oppNewScore": 2506,
+          "oppID": 1048,
           "oppName": "Syke",
           "oppIsTagged": "true",
-          "tourneyID": "814",
+          "tourneyID": 814,
           "eventName": "Singles Pro",
           "playerCharImg": "",
           "isWin": "true",
-          "change": "44",
+          "change": 44,
           "winnerName": "smopup",
           "note": ""
         }
@@ -72,10 +72,10 @@
   ],
   "players": [
     {
-      "playerID": 1038,
-      "name": "Shitashi",
-      "siteLink": "/Players/QLD?p=Shitashi",
-      "siteLinkTitle": "View Smash Bros data for Shitashi from Queensland",
+      "playerID": 1049,
+      "name": "smopup",
+      "siteLink": "/Players/QLD?p=smopup",
+      "siteLinkTitle": "View Smash Bros data for smopup from Queensland",
       "regionID": "4"
     }
   ],
@@ -92,7 +92,21 @@
   ],
   "characters": [
     {
-      "characterID": 66,
+      "characterID": 73,
+      "name": "Bowser",
+      "short": "Bowser",
+      "imgURL": "/Content/Uploads/227461c4-cff6-4b9b-bf76-621ceff3c4d2.png",
+      "colour": "#32765c"
+    },
+    {
+      "characterID": 70,
+      "name": "Bowser",
+      "short": "Bowser",
+      "imgURL": "/Content/Uploads/227461c4-cff6-4b9b-bf76-621ceff3c4d2.png",
+      "colour": "#32765c"
+    },
+    {
+      "characterID": 87,
       "name": "Bowser",
       "short": "Bowser",
       "imgURL": "/Content/Uploads/227461c4-cff6-4b9b-bf76-621ceff3c4d2.png",
@@ -101,7 +115,7 @@
   ],
   "regions": [
     {
-      "regionID": "4",
+      "regionID": 4,
       "imgURL": "/Content/Uploads/2e82492e-24c9-4863-94f2-0aebe084ff64.png",
       "name": "Queensland",
       "short": "QLD"

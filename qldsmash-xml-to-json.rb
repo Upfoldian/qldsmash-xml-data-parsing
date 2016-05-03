@@ -1,7 +1,7 @@
 require 'JSON'
 require 'nokogiri'
 
-xml = Nokogiri::XML(File.read "20160502 - qldsmash SSBM elo.xml")
+xml = Nokogiri::XML(File.read "sample-xml-structure.xml")
 xml = xml.xpath("//EloXmlModel")
 
 createDate 	= xml.xpath("CreatedDate").text
@@ -25,17 +25,17 @@ xml.xpath("Items//EloItemXmlModel").each do |item|
 	item.xpath("Movements/EloMovementXmlModel").each do |movement|
 
 		oldScore 		= movement.xpath("OldScore").text.to_i
-		newScore 		= movement.xpath("NewScore").text
-		oppOldScore 	= movement.xpath("OpponentOldScore").text
-		oppNewScore 	= movement.xpath("OpponentNewScore").text
-		oppID 			= movement.xpath("OpponentID").text
+		newScore 		= movement.xpath("NewScore").text.to_i
+		oppOldScore 	= movement.xpath("OpponentOldScore").text.to_i
+		oppNewScore 	= movement.xpath("OpponentNewScore").text.to_i
+		oppID 			= movement.xpath("OpponentID").text.to_i
 		oppName 		= movement.xpath("OpponentName").text
 		oppIsTagged		= movement.xpath("OpponentIsTagged").text
-		tourneyID 		= movement.xpath("TourneyID").text
+		tourneyID 		= movement.xpath("TourneyID").text.to_i
 		eventName 		= movement.xpath("EventName").text
 		playerCharImg 	= movement.xpath("PlayerCharImage").text
 		isWin 			= movement.xpath("IsWin").text
-		change 			= movement.xpath("Change").text
+		change 			= movement.xpath("Change").text.to_i
 		winnerName 		= movement.xpath("WinnerName").text
 		note 			= movement.xpath("Note").text
 
@@ -135,7 +135,7 @@ end
 
 xml.xpath("Regions//XmlRegionModel").each do |region|
 
-	regionID 			= region.xpath("ID").text
+	regionID 			= region.xpath("ID").text.to_i
 	imgURL 				= region.xpath("ImageUrl").text
 	name 				= region.xpath("Name").text
 	short 				= region.xpath("Short").text
@@ -146,4 +146,4 @@ xml.xpath("Regions//XmlRegionModel").each do |region|
 
 end
 
-File.open("20160502 - qldsmash SSBM elo.json", 'w') { |file| file.write(JSON.pretty_generate(eloHash))}
+File.open("test_xml_parse.json", 'w') { |file| file.write(JSON.pretty_generate(eloHash))}
