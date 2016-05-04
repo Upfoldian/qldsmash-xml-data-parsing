@@ -25,7 +25,7 @@ module Helpers
 			tourneyID 	= tourney['tourneyID']
 			regionID 	= tourney['regionID']
 			name 		= tourney['name']
-			date 		= tourney['date'] == nil ? "" : tourney['date'].split('t')[0]
+			date 		= tourney['tourneyDate'].split('T')[0]
 
 			tourneyIDHash[tourneyID] = {:regionID => regionID, :name => name, :date => date}
 		end

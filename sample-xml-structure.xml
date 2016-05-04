@@ -33,6 +33,8 @@
  	<OpponentIsTagged> 		=>
  	<TourneyID> 			=>
  	<EventName> 			=>
+ 	<PlayerCharImg> 		=>
+ 	<OpponentCharImg> 		=?
  	<IsWin> 				=>
  	<Change> 				=>
  	<WinnerName> 			=>

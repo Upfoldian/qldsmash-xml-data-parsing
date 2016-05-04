@@ -33,7 +33,7 @@
           "oppOldScore": 2550,
           "oppNewScore": 2506,
           "oppID": 1048,
-          "oppName": "Syke",
+          "oppName": "Mike",
           "oppIsTagged": "true",
           "tourneyID": 814,
           "eventName": "Singles Pro",
@@ -81,7 +81,7 @@
   ],
   "tourneys": [
     {
-      "tourneyID": 334,
+      "tourneyID": 814,
       "name": "UQ Smash 3",
       "displayName": "[QLD] UQ Smash 3",
       "regionID": 4,
